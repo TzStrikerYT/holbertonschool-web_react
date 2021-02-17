@@ -1,0 +1,36 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #e1514c;
+  font-size: 20px;
+  font-weight: bold !important;
+  border-bottom: #e1514c solid .3rem;
+}
+
+.App-logo {
+    width: 15%;
+    margin-right: 2%;
+}
+
+/* Body content */
+.App-body {
+  margin: 3rem;
+  padding-bottom: 25%;
+}
+
+/* footer content */
+.App-footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border-top: #e1514c solid .3rem;
+}
