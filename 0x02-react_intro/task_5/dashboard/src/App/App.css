@@ -1,0 +1,33 @@
+#root {
+    height: 50vh;
+}
+
+.App-header {
+    width: 100%;
+    border-bottom: 4px solid red;
+    color: red;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.App-logo {
+    height: 200px;
+    width: 200px;
+}
+
+.App-body {
+    height: 100%;
+    margin: 50px 50px;
+}
+
+input {
+    margin: 0 10px;
+}
+
+.App-footer {
+    width: 100%;
+    border-top: 4px solid red;
+    text-align: center;
+    font-style: italic;
+}
