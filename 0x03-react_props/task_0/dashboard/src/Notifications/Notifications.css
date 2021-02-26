@@ -1,0 +1,16 @@
+.Notifications {
+    border: 2px dashed red;
+}
+
+.close-button img{
+    width: 10px;
+    height: 10px;
+}
+
+[data-priority="default"] {
+    color: blue;
+}
+
+[data-priority="urgent"] {
+    color: red;
+}

@@ -1,0 +1,13 @@
+.App-header {
+    width: 100%;
+    border-bottom: 4px solid red;
+    color: red;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.App-logo {
+    height: 200px;
+    width: 200px;
+}
