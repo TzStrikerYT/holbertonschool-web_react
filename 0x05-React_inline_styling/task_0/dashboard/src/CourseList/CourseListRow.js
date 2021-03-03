@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 
 const rowStyle = {
     backgroundColor: "#f5f5f5ab" /*bg-color */
-}
+};
 
 /* Styles for header*/
 const headerRowStyle = {
-    backgroundColor: "#deb5b545" /* bg-color */
-}
+    backgroundColor: "#deb5b545"/* bg-color */
+};
 
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
     let clRow;
@@ -29,8 +29,8 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 
     let styleOf;
 
-    /* if header exist apply styles to row else apply header only in the header */
-    styleOf = isHeader ? headerRowStyle : rowStyle
+    /* apply a style in the header aand in the rows*/
+    styleOf = isHeader ? headerRowStyle : rowStyle;
 
     return <tr style={styleOf}>{clRow}</tr>;
 }
