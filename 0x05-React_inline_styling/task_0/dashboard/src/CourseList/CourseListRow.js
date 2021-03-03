@@ -9,7 +9,7 @@ const rowStyle = {
 
 /* Styles for header*/
 const headerRowStyle = {
-    backgroundColor: "#f5f5f5ab" /* bg-color */
+    backgroundColor: "#deb5b545" /* bg-color */
 }
 
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
