@@ -27,12 +27,12 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 
     /* Styles application */
 
-    let headerStyle;
+    let styleOf;
 
     /* if header exist apply styles to row else apply header only in the header */
-    headerStyle = isHeader ? headerRowStyle : rowStyle
+    styleOf = isHeader ? headerRowStyle : rowStyle
 
-    return <tr style={headerStyle}>{clRow}</tr>;
+    return <tr style={styleOf}>{clRow}</tr>;
 }
 
 CourseListRow.defaultProps = {
