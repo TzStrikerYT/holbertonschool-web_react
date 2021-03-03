@@ -30,7 +30,7 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
     let headerStyle;
 
     /* if header exist apply styles to row else apply header only in the header */
-    headerStyle = isHeader ? headerStyle : headerRowStyle
+    headerStyle = isHeader ? headerRowStyle : rowStyle
 
     return <tr style={headerStyle}>{clRow}</tr>;
 }
