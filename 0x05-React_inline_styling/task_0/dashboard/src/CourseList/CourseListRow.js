@@ -1,33 +1,38 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
+/* Styles for row */
+
+const rowStyle = {
+    backgroundColor: "#f5f5f5ab" /*bg-color */
+};
+
+/* Styles for header*/
+const headerRowStyle = {
+    backgroundColor: "#deb5b545"/* bg-color */
+};
+
 function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
     let clRow;
-    const backgroundStyle = {
-        background: isHeader === true ? "#deb5b545" : "#f5f5f5ab"
-    }
 
     if (isHeader === true) {
         if (textSecondCell) {
-            clRow = (
-                <>
-                    <th style={backgroundStyle}>{textFirstCell}</th>
-                    <th style={backgroundStyle}>{textSecondCell}</th>
-                </>
-            );
+            clRow = <><th>{textFirstCell}</th><th>{textSecondCell}</th></>;
         } else {
-            clRow = <><th style={backgroundStyle} colSpan="2">{textFirstCell}</th></>;
+            clRow = <><th colSpan="2">{textFirstCell}</th></>;
         }
     } else if (isHeader === false) {
-        clRow = (
-            <>
-                <td style={backgroundStyle}>{textFirstCell}</td>
-                <td style={backgroundStyle}>{textSecondCell}</td>
-            </>
-        );
+        clRow = <><td>{textFirstCell}</td><td>{textSecondCell}</td></>;
     }
 
-    return <tr>{clRow}</tr>;
+    /* Styles application */
+
+    let styleOf;
+
+    /* apply a style in the header aand in the rows*/
+    styleOf = isHeader ? headerRowStyle : rowStyle;
+
+    return <tr style={styleOf}>{clRow}</tr>;
 }
 
 CourseListRow.defaultProps = {
