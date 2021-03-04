@@ -1,14 +1,15 @@
 import React from "react";
+import { StyleSheet, css } from 'aphrodite';
+import PropTypes from 'prop-types';
+
 import Header from "../Header/Header";
 import Login from "../Login/Login";
 import Footer from "../Footer/Footer";
 import Notifications from "../Notifications/Notifications";
 import BodySection from "../BodySection/BodySection";
 import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
-import PropTypes from 'prop-types';
 import CourseList from '../CourseList/CourseList'
 import { getLatestNotification } from "../utils/utils";
-import {StyleSheet, css } from 'aphrodite'
 
 const listCourses = [
     { id: 1, name: "ES6", credit: 60 },
@@ -30,8 +31,8 @@ class App extends React.Component {
     }
 
     handleKeyDownCombination(event) {
-        if (event.key === "h" && event.ctrlKey) {
-            alert("Logging you out");
+        if (event.key === 'h' && event.ctrlKey) {
+            alert('Logging you out');
             this.props.logOut();
         }
     }
@@ -50,21 +51,21 @@ class App extends React.Component {
             <>
                 <Notifications listNotifications={listNotifications}/>
                 <Header/>
-                <div className={css(styles.appBody)}>
+                <div className={css(styles.body)}>
                     {!isLoggedIn ? (
-                        <BodySectionWithMarginBottom title="Log in to continue">
+                        <BodySectionWithMarginBottom title='Log in to continue'>
                             <Login />
                         </BodySectionWithMarginBottom>
                     ) : (
-                        <BodySectionWithMarginBottom title="Course list">
+                        <BodySectionWithMarginBottom title='Course list'>
                             <CourseList listCourses={listCourses} />
                         </BodySectionWithMarginBottom>
                     )}
-                    <BodySection title="News from the School">
+                    <BodySection title='News from the School'>
                         <p>Some Random Text</p>
                     </BodySection>
                 </div>
-                <Footer className={css(styles.footer)}/>
+                <Footer className={css(styles.footer)} />
             </>
         );
     }
@@ -80,8 +81,12 @@ App.propTypes = {
     logOut: PropTypes.func,
 };
 
+const cssVars = {
+    mainColor: 'red',
+};
+
 const styles = StyleSheet.create({
-    appBody: {
+    body: {
         height: '50vh',
         margin: '50px 50px',
     },
